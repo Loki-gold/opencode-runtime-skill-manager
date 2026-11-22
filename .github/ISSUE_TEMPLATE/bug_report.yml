@@ -1,0 +1,59 @@
+name: Bug report
+description: Something does not work as documented
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please do not paste API keys, tokens or private repository names. Security problems belong in the private advisory flow described in SECURITY.md.
+  - type: input
+    id: version
+    attributes:
+      label: Runtime Skill Manager version
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: input
+    id: opencode
+    attributes:
+      label: OpenCode version
+      placeholder: 2.2.7
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: OS
+      placeholder: Windows 11, macOS 15, Ubuntu 24.04
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: Include the tool JSON or /skill-manager output if available.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant activity log
+      description: Lines from .opencode/skill-manager/activity.log with secrets redacted.
+      render: text
+    validations:
+      required: false

@@ -1,0 +1,54 @@
+{
+  "name": "opencode-runtime-skill-manager",
+  "version": "1.0.0",
+  "description": "Discover, inspect, install and hot-load OpenCode Agent Skills at runtime — without restarting OpenCode.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Loki-gold",
+  "homepage": "https://github.com/Loki-gold/opencode-runtime-skill-manager#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Loki-gold/opencode-runtime-skill-manager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Loki-gold/opencode-runtime-skill-manager/issues"
+  },
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "agent-skills",
+    "skills-sh",
+    "ai-agents",
+    "claude-code",
+    "runtime",
+    "plugin",
+    "typescript"
+  ],
+  "exports": {
+    ".": "./index.ts"
+  },
+  "files": [
+    "index.ts",
+    "src",
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json",
+    "e2e": "node scripts/skill-manager-e2e.mjs",
+    "check": "npm run typecheck && npm test"
+  },
+  "dependencies": {
+    "@opencode/plugin": "2.2.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.3",
+    "vitest": "^5.1.1"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
